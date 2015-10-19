@@ -41,7 +41,7 @@ class Application {
      */
     showApp() {
         this.containerView.render();
-        Backbone.history.start({ pushState: true });
+        Backbone.history.start(/*{ pushState: true }*/);
     }
 
 }
