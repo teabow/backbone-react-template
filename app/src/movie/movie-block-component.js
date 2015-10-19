@@ -1,3 +1,5 @@
+'use strict';
+
 /** @jsx React.DOM */
 var React = require('react');
 var Backbone = require('backbone');
@@ -10,9 +12,9 @@ var MovieBlock = React.createBackboneClass({
         var id = movie.get('id');
 
         return (
-            <div className="movie-block" onClick={this.selectMovie}>
-                <h2>{title}</h2>
-            </div>
+            <li className="movie-block" onClick={this.selectMovie}>
+                <div>{title}</div>
+            </li>
         );
     },
 

@@ -1,3 +1,5 @@
+'use strict';
+
 var AbstractView = require('../abstract-view');
 var MovieDetailsComponent = require('./movie-details-component');
 

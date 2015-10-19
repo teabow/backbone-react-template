@@ -1,15 +1,17 @@
+'use strict';
+
 /** @jsx React.DOM */
 var React = require('react');
 var ReactBackbone = require('react.backbone');
 
-var MainComponent = React.createBackboneClass({
+var ContainerComponent = React.createBackboneClass({
     render: function () {
         return (
             <div>
-                <div id="main-container"></div>
+                <div id="main-container" className="container"></div>
             </div>
         );
     }
 });
 
-module.exports = MainComponent;
+module.exports = ContainerComponent;

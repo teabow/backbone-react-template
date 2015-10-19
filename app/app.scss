@@ -1,20 +1,35 @@
+$blue: #009ecd;
+
 body {
     font-family: helvetica, sans-serif;
     margin: 0;
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        color: $blue;
+    }
+
+    ul  {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            padding: 16px;
+        }
+        li:nth-child(odd) {
+            background-color: #dcdcdc;
+        }
+    }
+
     header {
-        background-color: #009ecd;
+        background-color: $blue;
         color: #fff;
         padding: 20px;
     }
-    div.container {
-        padding: 20px;
-        button {
-            background-color: #dcdcdc;
-            border: none;
-            margin-right: 8px;
-            padding: 8px;
-        }
-    }
+
     footer {
         background-color: #f1f1f1;
         border-top: 1px solid #dcdcdc;

@@ -47,7 +47,7 @@ gulp.task('sass', function () {
 
 gulp.task('browserify', function () {
     return browserify({debug: false})
-        .add('./' + appDir + '/src/main.js')
+        .add('./' + appDir + '/src/index.js')
         .bundle()
         .pipe(source('app.js'))
         .pipe(gulp.dest(serverDir));

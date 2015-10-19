@@ -1,3 +1,5 @@
+'use strict';
+
 /** @jsx React.DOM */
 var React = require('react');
 var Backbone = require('backbone');
@@ -12,8 +14,8 @@ var MovieDetails = React.createBackboneClass({
 
         return (
             <div className="movie-details">
-                <h2>Title : {title} ({year})</h2>
-                <h2>Release date : {releaseDates.theater}</h2>
+                <h1>{title} ({year})</h1>
+                <div>Release date : {releaseDates.theater}</div>
             </div>
         );
     }

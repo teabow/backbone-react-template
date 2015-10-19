@@ -26,7 +26,7 @@ gulp.task('build_sass', function () {
 
 gulp.task('build_browserify', function () {
     return browserify({debug: false})
-        .add('./' + appDir + '/scripts/main.js')
+        .add('./' + appDir + '/src/index.js')
         .bundle(function (err, src) {
             if (err) throw err;
             var script = uglify.minify(src.toString('utf8'), {fromString: true}).code;

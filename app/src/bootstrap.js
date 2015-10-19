@@ -1,45 +1,49 @@
+'use strict';
+
 var Backbone = require('backbone');
 var Router = require('./router');
-var MainView = require('./main/main-view');
+var ContainerView = require('./container/container-view');
 var MoviesController = require('./movies/movies-controller');
 Backbone.$ = $;
 
 /**
  * Application class
- * @constructor
  */
-var Application = function() {
-    this.initialize();
-};
+class Application {
 
-/**
- * Application initialization method
- */
-Application.prototype.initialize = function() {
+    constructor() {
+        this.initialize();
+    }
 
-    this.controllers = {
-        movies: new MoviesController({ app: this })
-    };
+    /**
+     * Application initialization method
+     */
+    initialize() {
+        this.controllers = {
+            movies: new MoviesController({ app: this })
+        };
 
-    this.router = new Router({
-        app: this,
-        controllers: this.controllers
-    });
+        this.router = new Router({
+            app: this,
+            controllers: this.controllers
+        });
 
-    this.mainView = new MainView({
-        el: $('#app'),
-        router: this.router
-    });
+        this.containerView = new ContainerView({
+            el: $('#app'),
+            router: this.router
+        });
 
-    this.showApp();
-};
+        this.showApp();
+    }
 
-/**
- * Shows application main view
- */
-Application.prototype.showApp = function() {
-    this.mainView.render();
-    Backbone.history.start({ pushState: true });
-};
+    /**
+     * Shows application main view
+     */
+    showApp() {
+        this.containerView.render();
+        Backbone.history.start({ pushState: true });
+    }
+
+}
 
 module.exports = {Application: Application};

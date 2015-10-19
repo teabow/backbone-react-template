@@ -1,13 +1,15 @@
+'use strict';
+
 var Backbone = require('backbone');
 var AbstractView = require('../abstract-view');
-var MainComponent = require('./main-component');
+var ContainerComponent = require('./container-component');
 
 /**
- * Application main view
+ * Application container view
  */
-var MainView = AbstractView.extend({
+var ConainerView = AbstractView.extend({
     component: function () {
-        return new MainComponent({
+        return new ContainerComponent({
             router: this.options.router
         });
     },
@@ -21,4 +23,4 @@ var MainView = AbstractView.extend({
     }
 });
 
-module.exports = MainView;
+module.exports = ConainerView;

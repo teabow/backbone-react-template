@@ -1,3 +1,5 @@
+'use strict';
+
 var MoviesCollection = require('./movies-collection');
 var MovieModel = require('../movie/movie-model');
 
@@ -19,7 +21,7 @@ var MoviesController = function(options) {
                 var moviesListView = new MoviesListView({
                     movies: self.moviesCollection
                 });
-                app.mainView.pageRender(moviesListView);
+                app.containerView.pageRender(moviesListView);
             });
         },
 
@@ -31,7 +33,7 @@ var MoviesController = function(options) {
             var movieDetailsView = new MovieDetailsView({
                 movie: movie
             });
-            app.mainView.pageRender(movieDetailsView);
+            app.containerView.pageRender(movieDetailsView);
 
         }
     };

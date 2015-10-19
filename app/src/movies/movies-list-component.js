@@ -1,3 +1,5 @@
+'use strict';
+
 /** @jsx React.DOM */
 var React = require('react');
 var ReactBackbone = require('react.backbone');
@@ -16,7 +18,7 @@ var MoviesListComponent = React.createBackboneClass({
         return (
             <div className="movies-container">
                 <h1>Movies</h1>
-                {moviesBlocks}
+                <ul>{moviesBlocks}</ul>
             </div>
         );
     }

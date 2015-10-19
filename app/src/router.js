@@ -1,3 +1,5 @@
+'use strict';
+
 var BackboneRouteControl = require('backbone-route-control');
 
 /**
