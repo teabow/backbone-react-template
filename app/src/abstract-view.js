@@ -16,7 +16,7 @@ var AbstractView = Backbone.View.extend({
     },
 
     render: function () {
-        React.renderComponent(this.component(), this.el);
+        React.render(this.component(), this.el);
         return this;
     }
 });

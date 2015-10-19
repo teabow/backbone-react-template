@@ -19,7 +19,6 @@ var MovieBlock = React.createBackboneClass({
     },
 
     selectMovie: function () {
-        console.log(this.props.movie.id);
         Backbone.history.navigate('movies/' + this.props.movie.id, {trigger: true});
     }
 });

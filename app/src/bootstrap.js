@@ -24,7 +24,6 @@ class Application {
         };
 
         this.router = new Router({
-            app: this,
             controllers: this.controllers
         });
 
@@ -37,7 +36,7 @@ class Application {
     }
 
     /**
-     * Shows application main view
+     * Shows application container view
      */
     showApp() {
         this.containerView.render();
@@ -46,4 +45,6 @@ class Application {
 
 }
 
-module.exports = {Application: Application};
+module.exports = {
+    Application: Application
+};
