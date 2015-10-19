@@ -7,7 +7,7 @@ var ContainerComponent = require('./container-component');
 /**
  * Application container view
  */
-var ConainerView = AbstractView.extend({
+var ContainerView = AbstractView.extend({
     component: function () {
         return new ContainerComponent({
             router: this.options.router
@@ -23,4 +23,4 @@ var ConainerView = AbstractView.extend({
     }
 });
 
-module.exports = ConainerView;
+module.exports = ContainerView;
