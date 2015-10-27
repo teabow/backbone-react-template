@@ -13,6 +13,7 @@
     "gulp": "~3.9",
     "gulp-connect": "^1.0.7",
     "gulp-cssmin": "^0.1.6",
+    "gulp-env": "^0.2.0",
     "gulp-jshint": "^1.9.2",
     "gulp-karma": "0.0.4",
     "gulp-load-plugins": "~0.4.0",

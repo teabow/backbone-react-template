@@ -30,7 +30,11 @@ gulp.task('connect', plugins.connect.server({
     livereload: true
 }));
 
-gulp.task('server', ['html', 'sass', 'browserify'], function () {
+gulp.task('server', ['set-env-dev'], function () {
+    gulp.start('_server');
+});
+
+gulp.task('_server', ['html', 'sass', 'browserify'], function () {
     gulp.start('connect');
     gulp.start('watch');
 });

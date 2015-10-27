@@ -46,7 +46,7 @@ gulp.task('clean', function () {
     deleteFolderRecursive(buildDir);
 });
 
-gulp.task('build', ['clean'], function () {
+gulp.task('build', ['set-env-prod', 'clean'], function () {
     gulp.start('build_html');
     gulp.start('build_sass');
     gulp.start('build_browserify');
