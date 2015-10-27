@@ -4,10 +4,10 @@ var Backbone = require('backbone');
 var Router = require('./router');
 var ContainerView = require('./container/container-view');
 var MoviesController = require('./movies/movies-controller');
-Backbone.$ = $;
+Backbone.$ = require('jquery');
 
 /**
- * Application class
+ * Application classs
  */
 class Application {
 
