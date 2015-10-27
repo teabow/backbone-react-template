@@ -2,13 +2,14 @@
 
 var AbstractView = require('../abstract-view');
 var MoviesListComponent = require('./movies-list-component');
+var React = require('react');
 
 var MoviesListView = AbstractView.extend({
+
     component: function () {
-        return new MoviesListComponent({
-            movies: this.options.movies
-        });
+        return <MoviesListComponent movies={this.options.movies}/>
     }
+
 });
 
 module.exports = MoviesListView;

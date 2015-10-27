@@ -1,7 +1,7 @@
 'use strict';
 
-var React = require('react');
 var Backbone = require('backbone');
+var ReactDOM = require('react-dom');
 
 /**
  * Application abstract view
@@ -16,7 +16,7 @@ var AbstractView = Backbone.View.extend({
     },
 
     render: function () {
-        React.render(this.component(), this.el);
+        ReactDOM.render(this.component(), this.el);
         return this;
     }
 });

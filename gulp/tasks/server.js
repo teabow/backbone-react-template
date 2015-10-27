@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')({lazy: false});
 var browserify = require('browserify');
 var sass = require('gulp-sass');
+var resolutions = require('browserify-resolutions');
 var source = require('vinyl-source-stream');
 var appDir = 'app', testDir = 'test',
     serverDir = '.tmp', buildDir = 'build';
@@ -48,6 +49,7 @@ gulp.task('sass', function () {
 gulp.task('browserify', function () {
     return browserify({debug: false})
         .add('./' + appDir + '/src/index.js')
+        .plugin(resolutions, ['react-dom', 'react', 'ReactDOM', 'React'])
         .bundle()
         .pipe(source('app.js'))
         .pipe(gulp.dest(serverDir));
