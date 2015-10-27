@@ -19,6 +19,7 @@ class Application {
      * Application initialization method
      */
     initialize() {
+
         this.controllers = {
             movies: new MoviesController({ app: this })
         };
@@ -28,7 +29,7 @@ class Application {
         });
 
         this.containerView = new ContainerView({
-            el: $('#app'),
+            el: '#app',
             router: this.router
         });
 

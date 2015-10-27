@@ -9,6 +9,7 @@ var sass = require('gulp-sass');
 var cssmin = require('gulp-cssmin');
 var source = require('vinyl-source-stream');
 var fs = require('fs');
+var resolutions = require('browserify-resolutions');
 var appDir = 'app', buildDir = 'build';
 
 
@@ -27,6 +28,7 @@ gulp.task('build_sass', function () {
 gulp.task('build_browserify', function () {
     return browserify({debug: false})
         .add('./' + appDir + '/src/index.js')
+        .plugin(resolutions, '*')
         .bundle(function (err, src) {
             if (err) throw err;
             var script = uglify.minify(src.toString('utf8'), {fromString: true}).code;

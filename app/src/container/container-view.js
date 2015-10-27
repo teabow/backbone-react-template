@@ -1,17 +1,16 @@
 'use strict';
 
-var Backbone = require('backbone');
 var AbstractView = require('../abstract-view');
 var ContainerComponent = require('./container-component');
+var React = require('react');
 
 /**
  * Application container view
  */
 var ContainerView = AbstractView.extend({
+
     component: function () {
-        return new ContainerComponent({
-            router: this.options.router
-        });
+        return <ContainerComponent router={this.options.router} />;
     },
 
     /**

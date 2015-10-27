@@ -2,12 +2,11 @@
 
 var AbstractView = require('../abstract-view');
 var MovieDetailsComponent = require('./movie-details-component');
+var React = require('react');
 
 var MovieDetailsView = AbstractView.extend({
     component: function () {
-        return new MovieDetailsComponent({
-            movie: this.options.movie
-        });
+        return <MovieDetailsComponent movie={this.options.movie}/>
     }
 });
 

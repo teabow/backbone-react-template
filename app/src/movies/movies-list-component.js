@@ -1,11 +1,11 @@
 'use strict';
 
-/** @jsx React.DOM */
 var React = require('react');
 var ReactBackbone = require('react.backbone');
 var MovieBlock = require('../movie/movie-block-component');
 
 var MoviesListComponent = React.createBackboneClass({
+
     mixins: [
         React.BackboneMixin('movies', 'change')
     ],
@@ -22,6 +22,7 @@ var MoviesListComponent = React.createBackboneClass({
             </div>
         );
     }
+
 });
 
 module.exports = MoviesListComponent;

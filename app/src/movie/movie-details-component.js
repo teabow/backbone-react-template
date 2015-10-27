@@ -1,8 +1,6 @@
 'use strict';
 
-/** @jsx React.DOM */
 var React = require('react');
-var Backbone = require('backbone');
 var ReactBackbone = require('react.backbone');
 
 var MovieDetails = React.createBackboneClass({
