@@ -1,5 +1,12 @@
-To run the app :
-- sudo npm install
-- gulp server
+### Install
+`sudo npm install`
 
-Your app will run on [http://localhost:9000](http://localhost:9000)
+### Run
+`gulp server`
+
+Your app will run on [http://localhost:9000](http://localhost:9000).
+
+### Build
+`gulp build`
+
+Your built app will be available in the `build` folder.
