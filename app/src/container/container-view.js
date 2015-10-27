@@ -9,8 +9,10 @@ var React = require('react');
  */
 var ContainerView = AbstractView.extend({
 
+    viewId: 'main-container',
+
     component: function () {
-        return <ContainerComponent router={this.options.router} />;
+        return <ContainerComponent router={this.options.router} viewId={this.viewId}/>;
     },
 
     /**
@@ -18,7 +20,7 @@ var ContainerView = AbstractView.extend({
      * @param view
      */
     pageRender: function (view) {
-        this.$('#main-container').html(view.render().$el);
+        this.render({component: view.component(), el: this.viewId});
     }
 });
 
