@@ -7,7 +7,7 @@ var MoviesController = require('./movies/movies-controller');
 Backbone.$ = require('jquery');
 
 /**
- * Application classs
+ * Application class
  */
 class Application {
 
