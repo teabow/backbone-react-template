@@ -32,7 +32,7 @@ gulp.task('build_browserify', function () {
             if (err) throw err;
             var script;
             try {
-                script = uglify.minify(src.toString('utf8'), {fromString: true, mangle: false}).code;
+                script = uglify.minify(src.toString('utf8'), {fromString: true}).code;
             } catch (e) {
                 console.log('Minify error', e);
             }
