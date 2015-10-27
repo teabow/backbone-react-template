@@ -3,10 +3,12 @@
 var Backbone = require('backbone');
 var Movie = require('../movie/movie-model');
 
+/*
 let API_KEY = '7waqfqbprs7pajbz28mqf6vz';
 let API_URL = 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json';
 let PAGE_SIZE = 25;
 let PARAMS = '?apikey=' + API_KEY + '&page_limit=' + PAGE_SIZE;
+*/
 
 /**
  * Movies collection

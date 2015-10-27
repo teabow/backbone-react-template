@@ -28,11 +28,17 @@ gulp.task('build_sass', function () {
 gulp.task('build_browserify', function () {
     return browserify({debug: false})
         .add('./' + appDir + '/src/index.js')
-        .plugin(resolutions, '*')
         .bundle(function (err, src) {
             if (err) throw err;
-            var script = uglify.minify(src.toString('utf8'), {fromString: true}).code;
-            fs.writeFileSync(buildDir + '/app.js', script, {encoding: 'utf8'});
+            var script;
+            try {
+                script = uglify.minify(src.toString('utf8'), {fromString: true}).code;
+            } catch (e) {
+                console.log('Minify error', e);
+            }
+            if (script) {
+                fs.writeFileSync(buildDir + '/app.js', script, {encoding: 'utf8'});
+            }
         });
 });
 
@@ -40,7 +46,7 @@ gulp.task('clean', function () {
     deleteFolderRecursive(buildDir);
 });
 
-gulp.task('build', ['test', 'clean'], function () {
+gulp.task('build', ['clean'], function () {
     gulp.start('build_html');
     gulp.start('build_sass');
     gulp.start('build_browserify');
